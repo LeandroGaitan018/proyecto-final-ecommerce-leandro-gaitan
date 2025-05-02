@@ -1,0 +1,92 @@
+
+body{
+    margin: 0;
+}
+
+.contenedor-grid{
+
+
+    display: grid;
+    grid-template-rows: auto 1fr auto ;
+    gap: 10px;
+}
+
+
+.header{
+
+
+    background-image: linear-gradient(to top, rgba(18, 65, 165, 0.973), rgba(180, 51, 28, 0.719));
+   
+    display: grid;
+    grid-template-columns: 80px 2fr 1fr;
+    align-items: center;
+   
+    
+    padding: 20px;
+}
+
+.header h1{
+
+    justify-self:center;
+    color: rgb(54, 192, 192);
+    font-size: 2em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.header span{
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    color:orangered;
+}
+
+.header a{
+    color:orangered;
+    font-size: 1.5em;
+}
+
+.header img{
+
+    padding: 0.5em;
+}
+
+.main{
+
+    background-image: url("../../Imágenes/Captura de pantalla de 2024-11-30 00-32-05.png");
+}
+
+.Productos{
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 1em;
+    gap: 20px;
+}
+
+.producto{
+
+    border-radius: 0.5em;
+    border: 0.5em solid red;
+    padding: 1em;
+    justify-self: center;
+}
+
+.form{
+
+
+    display: flex;
+    justify-content: center;
+}
+
+footer{
+
+    text-align: center;
+    background-image: linear-gradient(to right, rgb(170, 180, 26), rgb(59, 223, 146))
+}
+
+@media (max-width: 768px) {
+   
+    
+    
+}

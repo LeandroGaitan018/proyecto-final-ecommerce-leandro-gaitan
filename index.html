@@ -1,139 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"href="estilos.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+    <title>Mi Página</title>
 </head>
 <body>
-
     <div class="contenedor-grid">
 
         <header class="header">
-
-
-            <img src="imagenes/Captura de pantalla de 2024-11-05 21-43-13.png" width="80px" height="80px">
-
-            <h1>Bienvenidos a mi pagina</h1>
-
+            <img src="imagenes/Captura de pantalla de 2024-11-05 21-43-13.png" alt="Logo" width="80" height="80">
+            <h1>Bienvenidos a mi página</h1>
             <span>
-                <a href="">Inicio</a>
-                <a href="">Productos</a>
-                <a href="">Contacto</a>
-                </span>
-
+                <a href="#reseñas">Reseñas</a>
+                <a href="#productos">Productos</a>
+                <a href="#contacto">Contacto</a>
+            </span>
         </header>
 
         <main>
 
-            <section class="Productos">
 
-                <div class="producto">
 
-                    <h2>VIno</h2>
-
-                    <p>buenas esta es mi lorem ipsum</p>
+            <h3>Reseñas</h3>
+            <section class="Reseñas" id="reseñas">
+                <div class="reseña">
+                    <h2>Vino 1</h2>
+                    <p>Este vino es exquisito.</p>
+                </div>
+                <div class="reseña">
+                    <h2>Cerveza Negra</h2>
+                    <p>Cerveza artesanal de alta calidad.
+                    </p>
+                </div>
+                <div class="reseña">
+                    <h2>Whisky 1</h2>
+                    <p>Un whisky de sabor intenso.</p>
                 </div>
 
-                <div class="producto">
-
-                    <h2>Cerveza</h2>
-
-                    <p>buenas esta es mi lorem ipsum</p>
+                <div class="reseña">
+                    <h2>Vino blanco</h2>
+                    <p>Este vino es exquisito.</p>
                 </div>
-
-                <div class="producto">
-
-                    <h2>hola</h2>
-
-                    <p>buenas esta es mi lorem ipsum</p>
+                <div class="reseña">
+                    <h2>Cerveza rubia</h2>
+                    <p>Cerveza artesanal de alta calidad.</p>
                 </div>
-
-                <div class="producto">
-
-                    <h2>VIno</h2>
-
-                    <p>buenas esta es mi lorem ipsum</p>
+                <div class="reseña">
+                    <h2>Whisky viejo</h2>
+                    <p>Un whisky de sabor intenso.</p>
                 </div>
-
-                <div class="producto">
-
-                    <h2>Cerveza</h2>
-
-                    <p>buenas esta es mi lorem ipsum</p>
-                </div>
-
-                <div class="producto">
-
-                    <h2>hola</h2>
-
-                    <p>buenas esta es mi lorem ipsum</p>
-                </div>
-
-                <div class="producto">
-
-                    <h2>VIno</h2>
-
-                    <p>buenas esta es mi lorem ipsum</p>
-                </div>
-
-                <div class="producto">
-
-                    <h2>Cerveza</h2>
-
-                    <p>buenas esta es mi lorem ipsum</p>
-                </div>
-
-                <div class="producto">
-
-                    <h2>hola</h2>
-
-                    <p>buenas esta es mi lorem ipsum</p>
-                </div>
-
-                
-
             </section>
 
-
-
-
-            <div class="form">
-            <form action="https://formspree.io/f/mgvaqbpg" method="post">
-
-                  <legend>Manda tus datos</legend>
-  
-                  <label for="nombre">Nombre:</label>
-                  <input type="text" name="nombre" id="nombre" placeholder="escribi tu nombre" required><br><br>
-  
-                  <label for="mail">Email:</label>
-                  <input type="email" name="mail" id="mail" placeholder="escribi tu mail" required><br><br>
-  
-                  <label for="opciones">Cual es tu sexo?</label>
-  
-                  <label for="masculino">M</label>
-                  <input type="radio" name="sexo" id="sexo" required>
-  
-                  <label for="femenino">F</label>
-                  <input type="radio" name="sexo" id="sexo" required><br><br>
-                  
-                  <label for="pais">Cual es tu pais?</label>
-                  <select name="paises">
-                      <option value="Argentina">Argentina</option>
-                      <option value="Argentina">Peru</option>
-                  </select>
-                  
-                  <button type="submit">mandar</button>
-            </form>
-
-            </div>
-
+            <hr>
+            <h3>Contacto</h3>
+            <section id="contacto">
+                    <form action="https://formspree.io/f/mgvaqbpg" method="post">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Escriba su nombre" required>
+                        <label for="mail">Email:</label>
+                        <input type="email" name="mail" id="mail" placeholder="Escriba su correo" required>
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea placeholder="mandanos un mensaje"></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+            </section>
+            
         </main>
 
-        <hr>
         <footer>
-            <p>hola como andas</p>
+            <p>&copy; 2025 Mi Página Web</p>
         </footer>
     </div>
 </body>

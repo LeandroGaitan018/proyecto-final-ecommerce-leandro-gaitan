@@ -1,48 +1,41 @@
-
-body{
+body {
     margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-.contenedor-grid{
-
-
+.contenedor-grid {
     display: grid;
-    grid-template-rows: auto 1fr auto ;
+    grid-template-rows: auto 1fr auto;
 }
 
-
-.header{
-
-
-    background-image: linear-gradient(to top, rgba(18, 65, 165, 0.973), rgba(180, 51, 28, 0.719));
-   
+.header {
+    background-image: linear-gradient(to top, #1241a5, #b4331c);
     display: grid;
     grid-template-columns: 80px 2fr 1fr;
     align-items: center;
-   border: 0.2em solid black;
-    
     padding: 20px;
+    border: 0.2em solid black;
+    position:sticky;
+    top: 0;
+    width: 96,9%;
 }
 
-.header h1{
-
-    justify-self:center;
+.header h1 {
+    justify-self: center;
     color: rgb(54, 192, 192);
     font-size: 2em;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.header span{
-
+.header span {
     display: flex;
     justify-content: space-evenly;
-    flex-direction: row;
-    color:orangered;
 }
 
-.header a{
-    color:orangered;
+.header a {
+    color: orangered;
     font-size: 1.5em;
+    text-decoration: none;
 }
 
 .header img{
@@ -52,39 +45,40 @@ body{
 
 
 
-
-.Productos{
-
+.Reseñas {
     display: grid;
-    grid-template-columns: auto auto auto;
-    padding: 1em;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
-    
-   
-}
-
-hr{
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.producto{
-
-    border-radius: 0.5em;
-    border: 0.5em solid red;
     padding: 1em;
-    background-image:url("imagenes/Captura de pantalla de 2024-11-05 21-41-25.png");
+}
+
+h3{
+
+    text-align:left;
+    font-size: 2em;
+    margin-bottom: 0.4em;
+    margin-top: 0.7em;
+    margin-left: 1em;
+    color:#f5310e;
+    
+}
+
+.reseña{
+    background-color: #fff;
+    border: 0.4em solid rgb(54, 192, 192);
+    border-radius: 0.5em;
+    padding: 1em;
+    text-align: center;
+    background-image:linear-gradient(to left, rgb(231, 88, 250), pink);
     background-position:center;
     justify-self: center;
+    width: 50%;
 }
 
-.form{
+.reseña h2{
 
+    color:#1241a5;
 
-    display: flex;
-    justify-content: center;
-    padding: 2em;
-    
 }
 
 main{
@@ -95,10 +89,31 @@ main{
     background-position: center;
 }
 
-footer{
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+    flex-direction: column;
+    padding: 5em;
+    margin: 6em;
+    border: rgb(54, 192, 192) groove 0.5em;
+    background-image:linear-gradient(to left, rgb(224, 94, 241), pink);
+}
+
+input, label, textarea, button{
 
     text-align: center;
-    background-image: linear-gradient(to right, rgb(170, 180, 26), rgb(59, 223, 146))
+    width: 36em;
+    
+}
+
+footer {
+    text-align: center;
+    background-image: linear-gradient(to left, #1241a5, #b4331c);
+    padding: 0.5em;
+    height: 3em;
+    color: rgb(54, 192, 192);
 }
 
 @media (max-width: 768px) {
@@ -106,16 +121,9 @@ footer{
     
     .header{
 
-
-        background-image: linear-gradient(to top, rgba(18, 65, 165, 0.973), rgba(180, 51, 28, 0.719));
-       
-        display: grid;
         grid-template-columns: 90px auto;
         grid-template-rows: auto auto;
-        align-items: center;
-       border: 0.2em solid black;
-        
-        padding: 20px;
+       
     }
 
     .header img{
@@ -151,11 +159,23 @@ footer{
         font-size: 0.8em;
     }
 
-    .Productos{
+    .Reseñas{
 
         grid-template-columns: auto auto;
         
 
+    }
+
+    input, label, textarea, button{
+
+        text-align: center;
+        width: 10em;
+        
+    }
+
+    form{
+
+        padding: 3em;
     }
     
     

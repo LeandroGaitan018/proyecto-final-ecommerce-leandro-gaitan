@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Playfair Display', serif;
 }
 
 .contenedor-grid {
@@ -52,11 +52,35 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap:wrap;
+    gap: 2em;
 }
 
 .card{
 
-    color: red;
+    color:black;
+    padding: 1em;
+    width: 18em;
+    height: 18em;
+}
+
+.card h2{
+
+    margin-top: -0.6em;
+    margin-left: -0.3em;
+}
+
+.card1{
+
+    background-image: url("imagenes/bott.png");
+    background-position: 0em 2em;
+    background-size: cover;
+}
+
+.card2{
+    background-image:url("imagenes/hol.png");
+    background-size: cover;
+    background-position: 0em 0.1em;
 }
 
 
@@ -207,6 +231,11 @@ footer {
         grid-template-columns: auto auto;
         
 
+    }
+
+    .reseña{
+
+        width: 15em;
     }
 
     input, label, textarea, button{

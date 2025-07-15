@@ -255,7 +255,7 @@ textarea{
     flex-direction:column;
     justify-content: space-between;
     position:fixed;
-    top: 23%;
+    top: auto;
     right:0%;
     border: solid rgb(39, 224, 54) 0.3em;
     width: 30em;
@@ -316,12 +316,14 @@ textarea{
 }
 
 .vaciar-carrito{
-    margin-bottom: 0.02em;
+    margin-bottom: 0;
     width: 10em;
-    height: 2.9em;
+    height: 2.5em;
     background-color: #e79a9a;
     color: #010b1a;
     cursor: pointer;
+    order: 3;
+
 }
 
 .cierre-carrito{
@@ -331,6 +333,18 @@ textarea{
     background-color: #b82a65;
     border-radius: 0.2em;
     cursor: pointer;
+}
+
+.precioTotal{
+    color: #000916;
+    font-size: 1.6em;
+    margin: 0;
+    margin-right: auto;
+
+    border: rgb(161, 0, 100) solid 0.2em;
+    background-color: #e79a9a;
+    order: 2;
+    
 }
 
 .boton-carrito{
@@ -470,7 +484,8 @@ footer {
         flex-direction:column;
         justify-content: space-between;
         position:fixed;
-        top: 19%;
+        top: auto;
+        
         border: solid rgb(39, 224, 54) 0.3em;
         width: 36.9em;
         height: 22em;
@@ -504,12 +519,53 @@ footer {
         left:84%;
         bottom: 17%;
         z-index: 20;
-        width: 3em;
-        height: 3em;
-        font-size: 1.1em;
+        width: 2em;
+        height: 2em;
+        font-size: 1.5em;
         text-align: center;
         color: hsl(172, 100%, 69%);
         background-image: linear-gradient(to bottom, #1a5bbd, #58228b);
     }
     
+    .carrito li{
+        display: flex;
+        justify-content: space-between;
+        align-items:left;
+        margin-bottom: 0.5em;
+        padding: 0.25em;
+        border: #021b41 0.20em groove;
+        border-radius: 0.2em;
+        font-size: 1.2em;
+        background-image: linear-gradient(to bottom, #0ab427, #088cc9);
+        
+    }
+
+    .vaciar-carrito{
+        margin-bottom: 0;
+        width: 10em;
+        height: 1.8em;
+        background-color: #e79a9a;
+        color: #010b1a;
+        cursor: pointer;
+        order: 3;
+    
+    }
+
+    .carrito h2{
+
+        margin-top: -0.4em;
+        color: #110342;
+        font-size: 1.8em;
+    }
+
+    .eliminar-producto{
+
+        width: 6em;
+        margin-top: 0em;
+        color: #09181a;
+        background-attachment: fixed;
+        background-color: #e79a9a;
+        font-size: 1.2em;
+    }
+
 }

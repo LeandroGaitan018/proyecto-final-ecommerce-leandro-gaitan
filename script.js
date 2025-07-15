@@ -34,13 +34,18 @@ function cerrarCarrito(){
 
 function vaciarCarrito(){
     localStorage.removeItem("carrito");
-    cargarCarrito();
-    // Reiniciar la cantidad de productos y actualizar el número en el DOM
+    localStorage.removeItem("total");
 
+    // Reiniciar la cantidad de productos y el precio total
     var cantidad = 0;
-    localStorage.setItem("cantidad", cantidad); // Guardar la cantidad en el localStorage
+    var precioTotal = 0;
+    localStorage.setItem("cantidad", cantidad);
+    localStorage.setItem("total", precioTotal);
+
+    // Actualizar el número de productos y el precio total en el DOM
     document.getElementById('numeroProductos').textContent = cantidad;
     document.getElementById('numeroProductos').style.display = "none";
+    cargarCarrito();
 }
 
 function agregarProducto(event){
@@ -53,10 +58,17 @@ function agregarProducto(event){
 
     var carrito = JSON.parse(localStorage.getItem("carrito")) || [];
     carrito.push(producto);
+
     localStorage.setItem("carrito", JSON.stringify(carrito));
     var cantidad = parseInt(localStorage.getItem("cantidad")) || 0;
     cantidad++;
     localStorage.setItem("cantidad", cantidad);
+
+
+    var precioTotal = parseInt(localStorage.getItem("total")) || 0;
+    precioTotal += parseInt(producto.precio);
+    localStorage.setItem("total", precioTotal);
+
     cargarCarrito();
 }
 
@@ -98,29 +110,41 @@ function cargarCarrito() {
         carrito.appendChild(li);
     }
 
-    cantidad = parseInt(localStorage.getItem("cantidad")) || 0;
+
+
+    var cantidad = parseInt(localStorage.getItem("cantidad")) || 0;
+    var precioTotal = parseInt(localStorage.getItem("total")) || 0;
+
     if(cantidad== 0) {
         document.getElementById('numeroProductos').style.display = "none";
     }else{
         document.getElementById('numeroProductos').style.display = "block";
         document.getElementById('numeroProductos').textContent = cantidad;
     }
+
+    document.getElementById('total').textContent = `Total: ${precioTotal} Ars`;
 }
 
 function eliminarProducto(id) {
     var carrito = JSON.parse(localStorage.getItem("carrito")) || [];
     var cantidad = parseInt(localStorage.getItem("cantidad")) || 0;
-    var productosEliminados = carrito.filter(producto => producto.id === id).length; // Contar cuántos productos se eliminan
+    var precioTotal = parseInt(localStorage.getItem("total")) || 0;
+
+    // Contar cuántos productos se eliminan y calcular el precio total a restar
+    var productosEliminados = carrito.filter(producto => producto.id === id);
+    var precioARestar = productosEliminados.reduce((total, producto) => total + parseInt(producto.precio), 0);
+
     carrito = carrito.filter(producto => producto.id !== id); // Mantener solo los productos que no coincidan con el ID
 
-    // Actualizar la cantidad total de productos
-    cantidad -= productosEliminados;
+    // Actualizar la cantidad total de productos y el precio total
+    cantidad -= productosEliminados.length;
+    precioTotal -= precioARestar;
 
-    
-
-    // Actualizar la cantidad de productos en el localStorage
+    // Guardar los cambios en el localStorage
     localStorage.setItem("carrito", JSON.stringify(carrito));
     localStorage.setItem("cantidad", cantidad);
+    localStorage.setItem("total", precioTotal);
+
 
     cargarCarrito();
 }

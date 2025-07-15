@@ -46,6 +46,7 @@ p{
     position:sticky;
     top: 0;
     width: 96,9%;
+    z-index: 10;
 }
 
 .header h1 {
@@ -102,6 +103,19 @@ p{
     border-radius: 4%;
     border: 0.4em ridge #c42f6d;
     background-size: cover;
+    position: relative;
+    
+}
+
+.card button{
+    position: absolute;
+    bottom:0;
+    width: 21.5em;
+    height: 2.4em;
+    background-image: linear-gradient(to bottom, #dd337a, #6b33a0);
+    cursor: pointer;
+    color: #a7c8fa;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .card h2{
@@ -235,13 +249,122 @@ textarea{
     border: #eb3681 0.3em groove;
 }
 
-button{
+
+.carrito{
+    display: none;
+    flex-direction:column;
+    justify-content: space-between;
+    position:fixed;
+    top: 23%;
+    right:0%;
+    border: solid rgb(39, 224, 54) 0.3em;
+    width: 30em;
+    height: 19em;
+    background-image: linear-gradient(to bottom, #1a5bbd, #58228b);
+    z-index: 7;
+    overflow-y: auto;
+
+}
+
+.cantidadProductos{
+    border-radius: 50%;
+    border: #1ca310 solid 0.2em;
+    position:fixed;
+    left:91%;
+    bottom: 20%;
+    z-index: 20;
+    width: 1.9em;
+    height: 1.9em;
+    text-align: center;
+    color: hsl(172, 100%, 69%);
+    background-image: linear-gradient(to bottom, #1a5bbd, #58228b);
+}
+
+.carrito h2{
+
+    margin-top: -0.4em;
+    color: #110342;
+}
+
+.carrito ul{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    list-style-type: none;
+    padding: 0.2em;
+    margin: 0;
+}
+.carrito li{
+    display: flex;
+    justify-content: space-between;
+    align-items:left;
+    margin-bottom: 0.5em;
+    padding: 0.25em;
+    border: #021b41 0.20em groove;
+    border-radius: 0.2em;
+    background-image: linear-gradient(to bottom, #0ab427, #088cc9);
+    
+}
+
+.eliminar-producto{
+
+    width: 6em;
+    margin-top: 0em;
+    color: #09181a;
+    background-attachment: fixed;
+    background-color: #e79a9a;
+}
+
+.vaciar-carrito{
+    margin-bottom: 0.02em;
+    width: 10em;
+    height: 2.9em;
+    background-color: #e79a9a;
+    color: #010b1a;
+    cursor: pointer;
+}
+
+.cierre-carrito{
+    width: 2em;
+    height: 1.8em;
+    margin-top: 0;
+    background-color: #b82a65;
+    border-radius: 0.2em;
+    cursor: pointer;
+}
+
+.boton-carrito{
+    position: fixed;
+    left: 92%;
+    bottom:10%;
+    width: 5%;
+    height: 10%;
+    background-attachment: fixed;
+    background-color: #bd145a;
+    font-size: 1.7em;
+    text-align: center;
+    border-radius: 35%;
+    border: rgb(70, 36, 36) 0.1em groove;
+    z-index: 10;
+    cursor: pointer;
+    
+}
+
+.boton-carrito:hover{
+    background-color: #da3278;
+    transform: scale(1.1);
+    transition: 0.1s ease-in-out;
+    border: rgb(42, 100, 92) 0.2em groove;
+
+}
+
+form button{
     height: 3.5em;
     border: #e67ca8 0.3em groove;
     background-color: rgb(39, 224, 54);
 }
 
-button:hover{
+form button:hover{
 
     background-color: rgb(3, 100, 11);
     transform: scale(1.08);
@@ -329,6 +452,64 @@ footer {
 
         padding: 3em;
     }
+
+    .card button{
+        position: absolute;
+        bottom:0;
+        width: 15em;
+        height: 1.7em;
+        background-image: linear-gradient(to bottom, #dd337a, #6b33a0);
+        cursor: pointer;
+        color: #a7c8fa;
+        font-size: 1.2em;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .carrito{
+        display: none;
+        flex-direction:column;
+        justify-content: space-between;
+        position:fixed;
+        top: 19%;
+        border: solid rgb(39, 224, 54) 0.3em;
+        width: 36.9em;
+        height: 22em;
+        background-image: linear-gradient(to bottom, #1a5bbd, #58228b);
+        z-index: 7;
+        overflow-y: auto;
     
+    }
+    
+    .boton-carrito{
+        position: fixed;
+        left: 87%;
+        bottom:10%;
+        width: 12%;
+        height: 8%;
+        background-attachment: fixed;
+        background-color: #bd145a;
+        font-size: 1.7em;
+        text-align: center;
+        border-radius: 35%;
+        border: rgb(70, 36, 36) 0.1em groove;
+        z-index: 10;
+        cursor: pointer;
+        
+    }
+
+    .cantidadProductos{
+        border-radius: 50%;
+        border: #f3a5a5 solid 0.2em;
+        position:fixed;
+        left:84%;
+        bottom: 17%;
+        z-index: 20;
+        width: 3em;
+        height: 3em;
+        font-size: 1.1em;
+        text-align: center;
+        color: hsl(172, 100%, 69%);
+        background-image: linear-gradient(to bottom, #1a5bbd, #58228b);
+    }
     
 }

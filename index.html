@@ -25,6 +25,23 @@
         </header>
 
         <main>
+
+            <button class="boton-carrito" id="boton-carrito">🛒</button>
+            <div class="cantidadProductos" id="numeroProductos">
+            </div>
+
+            <div id="carrito" class="carrito">
+                <button class="cierre-carrito" id="cerrar-carrito">X</button>
+                <h2>Carrito de Compras</h2>
+                <ul id="carritoItems">
+                
+                </ul>
+
+                <button class="vaciar-carrito" id="vaciarCarrito">Vaciar Carrito</button>
+            </div>
+
+            
+
             <h3>Productos</h3>
             <section class="productos" id="productos">
 
@@ -32,6 +49,7 @@
                     <h2>Bob Dylan - Blood on the tracks
                         200.000ars
                     </h2>
+                    <button class="agregar-producto" data-id="1" data-precio="200.000" data-nombre="Blood on the tracks">Agregar al carrito</button>
                     
                 </div>
 
@@ -39,12 +57,14 @@
                     <h2>Kate bush - Hounds of Love
                         200.000ars
                     </h2>
+                    <button class="agregar-producto" data-id="2" data-precio="200.000" data-nombre="Hounds of love">Agregar al carrito</button>
                 </div>
 
                 <div class="card card3">
                     <h2>Slowdive - Start Roving 
                         150.000ars
                     </h2>
+                    <button class="agregar-producto" data-id="3" data-precio="150.000" data-nombre="Start roving">Agregar al carrito</button>
                     
                 </div>
 
@@ -52,6 +72,7 @@
                     <h2>Minecraft - Volume Alpha 
                         60.000ars
                     </h2>
+                    <button class="agregar-producto" data-id="4" data-precio="60.000" data-nombre="Volume alpha">Agregar al carrito</button>
                 </div>
             </section>
 
@@ -124,5 +145,7 @@
             <p>&copy; 2025 Vinilos y Opiniones</p>
         </footer>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

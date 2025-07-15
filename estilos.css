@@ -313,6 +313,7 @@ textarea{
     color: #09181a;
     background-attachment: fixed;
     background-color: #e79a9a;
+    cursor:pointer;
 }
 
 .vaciar-carrito{
